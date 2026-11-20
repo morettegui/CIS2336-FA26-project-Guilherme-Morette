@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>References | UH Sugar Land Student Center</title>
+  <meta name="description" content="AI prompts, media credits, and sources used to build this class project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main" tabindex="-1">
+
+    <div class="page-hero">
+      <div class="container">
+        <h1>References</h1>
+        <p>Every AI prompt I used, word for word, plus credits for the photos, video, map, fonts, and sources behind this site.</p>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="prompts-title">
+      <div class="container">
+        <h2 id="prompts-title">AI prompts</h2>
+        <p class="section-intro">I used an AI coding assistant to help write this site. Each prompt below is copied exactly as I sent it, with the date, the tool, and what it produced.</p>
+
+        <article class="prompt" aria-labelledby="prompt-1-title">
+          <h3 id="prompt-1-title">Prompt 1</h3>
+          <p class="prompt-meta">
+            <span><time datetime="2026-11-18">November 18, 2026</time></span>
+            <span>Tool: Claude Code (Anthropic)</span>
+          </p>
+          <blockquote class="prompt-text">UH Sugar Land Student Center website (class project)
+
+You're helping me with the front end of a class web development project: a website for the new Student Center on the University of Houston Sugar Land campus. Students use it to learn what the center offers, get quick answers, and reserve a room online instead of booking in person.
+Please help me continue developing this front-end part of my project
+
+## Project structure
+- index.html: home (hero, "Rooms right now" board, embedded YouTube video, Study/Meet/Relax, hours, Developer Contact)
+- about.html: About us, Meet the team, Careers
+- services.html: Study and meeting rooms, Lounge and café, Events
+- blog.html and post.html: blog list, and a single post loaded by ?id=
+- faq.html: 5 collapsible questions
+- booking.html: room booking form
+- contact.html: contact form and Google Map
+- references.html: AI prompts, media credits, sources
+- css/styles.css: all styles; colors and fonts are CSS variables at the top
+- js/menu.js: builds the menu and footer on every page from SITE_MENU
+- js/rooms.js: 5 rooms, opening hours, sample bookings, checkAvailability(), saveBooking()
+- js/booking.js: booking form validation and live availability messages
+- js/faq.js, js/home.js, js/blog.js, js/contact.js: page-specific scripts
+
+## Course requirements (these must keep working after every change)
+1. Homepage with a navigation menu built dynamically with JavaScript (js/menu.js).
+2. A "Developer Contact" section on the homepage with a name and uh email. 
+3. FAQ page with exactly 5 collapsible items.
+4. Room booking page with 5 rooms, validation on every field following best practices, and an availability check for each room. Availability is simulated in js/rooms.js. Only checkAvailability() and saveBooking() should talk to the future back end.
+5. References page showing every AI prompt I used, word for word.
+6. Multimedia hosted remotely and embedded (images and video), not downloaded into the project.
+7. Good UI practices: works on phone screens, usable with a keyboard, visible focus, a label on every field, enough color contrast.
+
+
+BASED ON MY PROJECT AS RIGHT NOW AND EVERYTHING I'VE DONE HELP ME CONCLUDE THIS,TAKE ALL TIME NEEDED TO COMPLETE THIS FRONT-END PROJECT</blockquote>
+          <p class="prompt-result"><strong>Result:</strong> Claude helped me creating this front-end part of the project</p>
+        </article>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="media-title">
+      <div class="container">
+        <h2 id="media-title">Media credits</h2>
+        <p class="section-intro">All photos, the video, and the map are hosted by their original sites and embedded here. Nothing is downloaded into the project.</p>
+
+        <h3>Photos (Unsplash, free to use under the <a href="https://unsplash.com/license">Unsplash License</a>)</h3>
+        <ul class="credit-list">
+          <li>Students laughing at a table with laptops (homepage hero): <a href="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">images.unsplash.com/photo-1522202176988-66273c2fd55f</a></li>
+          <li>Student writing notes next to a mug (homepage, Study): <a href="https://images.unsplash.com/photo-1434030216411-0b793f4b4173">images.unsplash.com/photo-1434030216411-0b793f4b4173</a></li>
+          <li>Four students talking around a table (homepage, Meet): <a href="https://images.unsplash.com/photo-1543269865-cbf427effbad">images.unsplash.com/photo-1543269865-cbf427effbad</a></li>
+          <li>Café with chalkboard menu and plants (homepage, Relax): <a href="https://images.unsplash.com/photo-1554118811-1e0d58224f24">images.unsplash.com/photo-1554118811-1e0d58224f24</a></li>
+          <li>Five smiling students outdoors (About us): <a href="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846">images.unsplash.com/photo-1517486808906-6ca8b3f04846</a></li>
+          <li>Friends raising coffee cups (Services, café; blog): <a href="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">images.unsplash.com/photo-1495474472287-4d71bcdd2085</a></li>
+          <li>Audience watching a presentation (Services, events): <a href="https://images.unsplash.com/photo-1540575467063-178a50c2df87">images.unsplash.com/photo-1540575467063-178a50c2df87</a></li>
+          <li>Hallway with glass-walled rooms (blog): <a href="https://images.unsplash.com/photo-1497366216548-37526070297c">images.unsplash.com/photo-1497366216548-37526070297c</a></li>
+          <li>Laptop, notebook, and coffee mug (blog): <a href="https://images.unsplash.com/photo-1501504905252-473c47e087f8">images.unsplash.com/photo-1501504905252-473c47e087f8</a></li>
+          <li>Open textbooks in front of a bookshelf (blog): <a href="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8">images.unsplash.com/photo-1456513080510-7bf3a84b82f8</a></li>
+        </ul>
+
+        <h3>Logo</h3>
+        <ul class="credit-list">
+          <li>University of Houston interlocking "UH" logo (site header), from Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:University_of_Houston_Logo.svg">commons.wikimedia.org/wiki/File:University_of_Houston_Logo.svg</a></li>
+        </ul>
+
+        <h3>Video</h3>
+        <ul class="credit-list">
+          <li>"Tier One in Fort Bend County," University of Houston, on YouTube: <a href="https://www.youtube.com/watch?v=rF1XfcDqMa8">youtube.com/watch?v=rF1XfcDqMa8</a> (embedded on the homepage)</li>
+        </ul>
+
+        <h3>Map and fonts</h3>
+        <ul class="credit-list">
+          <li>Map: embedded from <a href="https://www.google.com/maps">Google Maps</a> (Contact page)</li>
+          <li>Bricolage Grotesque, by Mathieu Triay: <a href="https://fonts.google.com/specimen/Bricolage+Grotesque">Google Fonts</a> (SIL Open Font License)</li>
+          <li>Atkinson Hyperlegible, by the Braille Institute: <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible">Google Fonts</a> (SIL Open Font License)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sources-title">
+      <div class="container">
+        <h2 id="sources-title">Sources</h2>
+        <ul class="credit-list">
+          <li>University of Houston brand guidelines (colors): <a href="https://www.uh.edu/brand/">uh.edu/brand</a></li>
+          <li>About the UH Sugar Land campus: <a href="https://www.uh.edu/sugarland/about/index.php">uh.edu/sugarland/about</a></li>
+          <li>Campus address (14000 University Blvd): <a href="https://studyinthestates.dhs.gov/certified-school/117076">Study in the States, University of Houston System</a></li>
+          <li>MDN Web Docs, the details element (FAQ): <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details">developer.mozilla.org</a></li>
+          <li>MDN Web Docs, client-side form validation: <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation">developer.mozilla.org</a></li>
+          <li>W3C, WCAG 2.2 quick reference (accessibility checks): <a href="https://www.w3.org/WAI/WCAG22/quickref/">w3.org/WAI/WCAG22/quickref</a></li>
+        </ul>
+        <p class="note">Team members and blog authors on this site are sample content written for this class project.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

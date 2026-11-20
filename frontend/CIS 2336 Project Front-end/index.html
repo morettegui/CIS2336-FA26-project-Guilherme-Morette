@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | UH Sugar Land Student Center</title>
+  <meta name="description" content="Study, meet, and relax at the Student Center on the University of Houston Sugar Land campus. See which rooms are free and book one online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/menu.js" defer></script>
+  <script src="js/rooms.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main" tabindex="-1">
+
+    <section class="home-hero" aria-labelledby="hero-title">
+      <div class="container home-hero-grid">
+        <div>
+          <p class="eyebrow">New on the UH Sugar Land campus</p>
+          <h1 id="hero-title">Your place to <span>study, meet, and recharge.</span></h1>
+          <p class="lead">Grab a quiet table, book a room for your group, or take a coffee break between classes. The Student Center is here for you.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="booking.html">Book a room</a>
+            <a class="btn btn-secondary" href="services.html">See what's inside</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=70&auto=format&fit=crop"
+               alt="Three students laughing together at a table with laptops and notebooks"
+               width="1000" height="750">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="rooms-now-title">
+      <div class="container">
+        <h2 id="rooms-now-title">Rooms right now</h2>
+        <p class="section-intro">See which of our 5 rooms are free for the next 30 minutes. Free rooms can be booked in one click.</p>
+        <ul class="rooms-board" id="rooms-board"></ul>
+        <p class="board-updated" id="board-updated"></p>
+        <noscript><p>Turn on JavaScript to see live room status, or visit the <a href="booking.html">booking page</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="video-title">
+      <div class="container">
+        <h2 id="video-title">Take a look at UH Sugar Land</h2>
+        <p class="section-intro">New to campus? Watch this short video from the University of Houston about its home in Fort Bend County.</p>
+        <div class="embed-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/rF1XfcDqMa8"
+                  title="Video: Tier One in Fort Bend County, by the University of Houston"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  loading="lazy"></iframe>
+        </div>
+        <p class="embed-caption">Video: "Tier One in Fort Bend County," University of Houston on <a href="https://www.youtube.com/watch?v=rF1XfcDqMa8">YouTube</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="spaces-title">
+      <div class="container">
+        <h2 id="spaces-title">Study, meet, relax</h2>
+        <p class="section-intro">Three ways to use the Student Center, all under one roof.</p>
+        <ul class="card-grid">
+          <li class="card">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=70&auto=format&fit=crop"
+                 alt="A student writing notes in a notebook next to a mug" width="600" height="400" loading="lazy">
+            <div class="card-body">
+              <span class="tag">Study</span>
+              <h3>Quiet rooms that are easy to book</h3>
+              <p>Two small study rooms with whiteboards and screens. Book online and skip the front desk line.</p>
+              <a class="btn btn-secondary btn-small" href="booking.html">Book a study room</a>
+            </div>
+          </li>
+          <li class="card">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&q=70&auto=format&fit=crop"
+                 alt="Four students talking and smiling around a table with a laptop" width="600" height="400" loading="lazy">
+            <div class="card-body">
+              <span class="tag">Meet</span>
+              <h3>Space for groups and clubs</h3>
+              <p>A meeting room for 10, a media room for recordings, and a multipurpose room for up to 40.</p>
+              <a class="btn btn-secondary btn-small" href="services.html#rooms">Compare rooms</a>
+            </div>
+          </li>
+          <li class="card">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=70&auto=format&fit=crop"
+                 alt="A bright café with a chalkboard menu, plants, and white chairs" width="600" height="400" loading="lazy">
+            <div class="card-body">
+              <span class="tag">Relax</span>
+              <h3>Lounge and café</h3>
+              <p>Comfy seats, free Wi-Fi, and coffee, tacos, and snacks at student prices.</p>
+              <a class="btn btn-secondary btn-small" href="services.html#cafe">See the café</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="hours-title">
+      <div class="container">
+        <h2 id="hours-title">Hours</h2>
+        <p class="section-intro">Rooms can be booked any time we're open. Hours may change during holidays and finals.</p>
+        <table class="hours-table">
+          <caption>Student Center opening hours</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Hours</th>
+            </tr>
+          </thead>
+          <tbody id="hours-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="developer-contact" aria-labelledby="developer-title">
+      <div class="container">
+        <h2 id="developer-title">Developer Contact</h2>
+        <div class="developer-card">
+          <span class="avatar" aria-hidden="true">GM</span>
+          <div>
+            <p class="developer-name">Guilherme Morette</p>
+            <p>Computer Information Systems student, University of Houston</p>
+            <p>Email: <a href="mailto:your-username@cougarnet.uh.edu">gmorettedeso@cougarnet.uh.edu</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>

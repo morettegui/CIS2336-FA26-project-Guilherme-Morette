@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a room | UH Sugar Land Student Center</title>
+  <meta name="description" content="Reserve a study room, meeting room, media room, or event space at the UH Sugar Land Student Center.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/menu.js" defer></script>
+  <script src="js/rooms.js" defer></script>
+  <script src="js/booking.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" id="site-header"></header>
+
+  <main id="main" tabindex="-1">
+
+    <div class="page-hero">
+      <div class="container">
+        <h1>Book a room</h1>
+        <p>Pick a room and a time, and we'll check if it's free while you fill in the form. All fields are required.</p>
+      </div>
+    </div>
+
+    <section class="section" aria-label="Room booking">
+      <div class="container form-layout">
+
+        <div>
+          <section class="success-panel" id="booking-confirmation" tabindex="-1" aria-labelledby="confirm-title" hidden>
+            <h2 id="confirm-title">You're booked!</h2>
+            <p>Your confirmation code is <span class="confirmation-code" id="confirm-code"></span></p>
+            <dl>
+              <dt>Room</dt><dd id="confirm-room"></dd>
+              <dt>Date</dt><dd id="confirm-date"></dd>
+              <dt>Time</dt><dd id="confirm-time"></dd>
+              <dt>People</dt><dd id="confirm-guests"></dd>
+              <dt>Name</dt><dd id="confirm-name"></dd>
+            </dl>
+            <p>Show this code at the front desk when you arrive. We'll hold the room for 15 minutes.</p>
+            <p class="note">Class project demo: no email is sent, and the booking is only saved in this browser.</p>
+          </section>
+
+          <form class="form-card" id="booking-form" novalidate>
+
+            <fieldset>
+              <legend>Your details</legend>
+
+              <div class="form-field">
+                <label for="full-name">Full name</label>
+                <input type="text" id="full-name" name="fullName" autocomplete="name" required
+                       aria-describedby="full-name-error">
+                <p class="field-error" id="full-name-error" hidden></p>
+              </div>
+
+              <div class="form-field">
+                <label for="email">UH email</label>
+                <span class="hint" id="email-hint">Ends in @uh.edu or @cougarnet.uh.edu</span>
+                <input type="email" id="email" name="email" autocomplete="email" required
+                       aria-describedby="email-hint email-error">
+                <p class="field-error" id="email-error" hidden></p>
+              </div>
+
+              <div class="form-field">
+                <label for="student-id">UH ID number</label>
+                <span class="hint" id="student-id-hint">The 7-digit number on your Cougar Card</span>
+                <input type="text" id="student-id" name="studentId" inputmode="numeric" maxlength="7" autocomplete="off" required
+                       aria-describedby="student-id-hint student-id-error">
+                <p class="field-error" id="student-id-error" hidden></p>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Room and time</legend>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="room">Room</label>
+                  <select id="room" name="roomId" required aria-describedby="room-error">
+                    <option value="">Choose a room</option>
+                  </select>
+                  <p class="field-error" id="room-error" hidden></p>
+                </div>
+
+                <div class="form-field">
+                  <label for="guests">Number of people</label>
+                  <input type="number" id="guests" name="guests" min="1" step="1" inputmode="numeric" required
+                         aria-describedby="guests-error">
+                  <p class="field-error" id="guests-error" hidden></p>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="date">Date</label>
+                <span class="hint" id="date-hint">Open Monday to Saturday. Book up to 30 days ahead.</span>
+                <input type="date" id="date" name="date" required
+                       aria-describedby="date-hint date-error">
+                <p class="field-error" id="date-error" hidden></p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="start-time">Start time</label>
+                  <select id="start-time" name="start" required aria-describedby="start-time-error">
+                    <option value="">Choose a time</option>
+                  </select>
+                  <p class="field-error" id="start-time-error" hidden></p>
+                </div>
+
+                <div class="form-field">
+                  <label for="end-time">End time</label>
+                  <select id="end-time" name="end" required aria-describedby="end-time-error">
+                    <option value="">Choose a time</option>
+                  </select>
+                  <p class="field-error" id="end-time-error" hidden></p>
+                </div>
+              </div>
+
+              <div class="availability" id="availability-status" role="status" aria-live="polite"></div>
+            </fieldset>
+
+            <fieldset>
+              <legend>About your booking</legend>
+
+              <div class="form-field">
+                <label for="purpose">What will you use the room for?</label>
+                <span class="hint" id="purpose-hint">For example: "CIS group project meeting." 10 to 300 characters.</span>
+                <textarea id="purpose" name="purpose" maxlength="300" rows="4" required
+                          aria-describedby="purpose-hint purpose-count purpose-error"></textarea>
+                <p class="char-count" id="purpose-count"></p>
+                <p class="field-error" id="purpose-error" hidden></p>
+              </div>
+
+              <div class="form-field">
+                <div class="checkbox-field">
+                  <input type="checkbox" id="agree" name="agree" required aria-describedby="agree-error">
+                  <label for="agree">I agree to the room rules: leave the room clean, keep noise down, and check in within 15 minutes.</label>
+                </div>
+                <p class="field-error" id="agree-error" hidden></p>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-primary" id="booking-submit">Book this room</button>
+          </form>
+        </div>
+
+        <aside aria-labelledby="room-info-title">
+          <h2 id="room-info-title" class="h3-size">Selected room</h2>
+          <div class="room-details" id="room-details">
+            <p>Choose a room to see its size and equipment.</p>
+          </div>
+
+          <h2 class="h3-size spaced-top">Good to know</h2>
+          <ul class="feature-list">
+            <li>Bookings run 30 minutes to 3 hours.</li>
+            <li>Friday hours end at 6 PM, Saturday at 5 PM.</li>
+            <li>We're closed on Sundays.</li>
+            <li>Not sure which room? <a href="services.html#rooms">Compare all 5 rooms</a>.</li>
+          </ul>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>
